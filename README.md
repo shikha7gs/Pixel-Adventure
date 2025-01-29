@@ -1,6 +1,6 @@
 ## Pixel Adventure
 
-**This is a platfomer game made using html, css and js.**
+**This is a Fantastic platfomer game made using html, css and js.**
 
 ### Controls:
 - Arrow Left/Right for movement
@@ -10,3 +10,6 @@
 you will get in demo :)
 
 #### **Enjoy (👉ﾟヮﾟ)👉**
+
+
+Credit: Used Ai for calculations and thumbnail
