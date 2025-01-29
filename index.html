@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Adventure</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="gameContainer">
+        <div id="tutorialOverlay">
+            <div id="tutorialSection1" class="tutorial-section active">
+                <h1>Welcome to Pixel Adventure!</h1>
+                <p>Get ready for an exciting platformer where you'll navigate through challenging levels, collect coins,
+                    and defeat enemies!</p>
+                <div class="tutorial-navigation">
+                    <button onclick="showTutorialSection(2)">Next</button>
+                </div>
+            </div>
+
+            <div id="tutorialSection2" class="tutorial-section">
+                <h1>Controls</h1>
+                <p>🖥️ Keyboard Controls:</p>
+                <p>← → Arrow Keys: Move Left and Right</p>
+                <p>↑ or Space: Jump</p>
+                <p>X: Attack</p>
+                <p>📱 Mobile Controls: Use on-screen buttons at the bottom</p>
+                <div class="tutorial-navigation">
+                    <button onclick="showTutorialSection(1)">Previous</button>
+                    <button onclick="showTutorialSection(3)">Next</button>
+                </div>
+            </div>
+
+            <div id="tutorialSection3" class="tutorial-section">
+                <h1>Game Objectives</h1>
+                <p>🪙 Collect coins to increase your score</p>
+                <p>🗝️ Find keys to progress to the next level</p>
+                <p>💥 Defeat enemies by jumping on them or attacking</p>
+                <p>⚡ Collect power-ups for special abilities</p>
+                <div class="tutorial-navigation">
+                    <button onclick="showTutorialSection(2)">Previous</button>
+                    <button onclick="startGame()">Start Game</button>
+                </div>
+            </div>
+        </div>
+        <canvas id='gameCanvas'></canvas>
+        <div class='ui-container'>
+            <div id='score'>Score: 0</div>
+            <div id='health'>Health: 100</div>
+        </div>
+        <div class='inventory' id='inventory'>
+            <div class='inventory-slot'></div>
+            <div class='inventory-slot'></div>
+            <div class='inventory-slot'></div>
+        </div>
+        <div class='mobile-controls'>
+            <div class='control-btn' id='leftBtn'>←</div>
+            <div class='control-btn' id='rightBtn'>→</div>
+            <div class='control-btn' id='jumpBtn'>↑</div>
+            <div class='control-btn' id='attackBtn'>⚔️</div>
+        </div>
+        <div class='game-over' id='gameOver'>
+            <h2>Game Over!</h2>
+            <p id='finalScore'>Score: 0</p>
+            <button onclick='restartGame()'>Play Again</button>
+        </div>
+        <div id='levelIndicator' class='level-indicator'>Level 1</div>
+        <div id='achievements' class='achievements'></div>
+        <div id='achievementPopup' class='achievement-popup'></div>
+    </div>
+    <script src='game.js'></script>
+</body>
+
+</html>  
